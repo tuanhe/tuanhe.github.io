@@ -3,7 +3,7 @@
 paginate: 10 # pagination based on number of posts
 paginate_path: "page:num"
 exclude: ["README.md"] # files to exclude
-highlighter: rouge
+#highlighter: black
 markdown: kramdown
 disqus: testbin
 google_analytics: AI MCU
@@ -16,7 +16,7 @@ defaults:
     values:
       title: AI on MCU
 
-description: Stylish Jekyll Theme
+description: wanna write the blog for easist way to learn AI on MCU
 author:
   name: tuanhe
   email: moozmoon@126.com
