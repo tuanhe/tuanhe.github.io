@@ -20,10 +20,10 @@ $on-laptop:        800px;
 $color-link: #036;
 $color-link-hover: #069;
 
-$header-bg: #607D8B;
+$header-bg: #FFF;
 $header-bg-hover: #78909C;
 $header-link: #CFD8DC;
-$header-fg: #FFF;
+$header-fg: #000;
 
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
