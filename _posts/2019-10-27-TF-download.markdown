@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Tensorflow lite for Microcontroller的下载的安装"
+title:  "Tensorflow lite for Microcontroller下载和安装"
 date:   2019-10-27 12:00:13
 categories: tf-lite mcu
 ---

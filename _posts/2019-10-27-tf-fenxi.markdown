@@ -1,0 +1,34 @@
+---
+layout: post
+title:  "Tensorflow lite for Microcontroller初探"
+date:   2019-10-27 12:30:13
+categories: tf-lite mcu
+---
+
+我们以speech项目为入手，来分析tensorflow-lite MCU在微控制器上的应用。  
+微语音speech的入口函数在[main.cc](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/lite/experimental/micro/examples/micro_speech/main.cc),可以看到该文件的主函数很简单：  
+```
+int main(int argc, char* argv[]) {
+  setup();
+  while (true) {
+    loop();
+  }
+}
+```   
+两个函数setup()和loop():  
+*    setup()主要是系统的初始化的一些事情  
+*    loop()主要是具体的推理过程，并根据每次推理得到的结果做后续的判断处理    
+
+在进入具体的分析之前，我们希望读者对AI推理的过程有个基本的概念：   
+```flow
+st=>start:语音数据采集
+preprocess=>operation:语音数据预处理
+AIinference=>operation:AI推理计算
+postprocess=>operation:获取结果
+resultprocess=>result:结果处理
+end=>end: 结束
+
+   st->preprocess->AIinference->postprocess->resultprocess->end
+```  
+
+>I dont know how to dram the flowchart with markdown
